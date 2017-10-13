@@ -1,4 +1,4 @@
-<p class="login-box-msg">Sign in to start your session</p>
+<p class="login-box-msg">Iniciar Sesion</p>
 
 <form>
 
@@ -7,10 +7,10 @@
     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
     <div *ngIf="eml.errors && (eml.dirty || eml.touched)" class="alert alert-danger">
         <div [hidden]="!eml.errors.required">
-          L'email est requis
+          El mail es requerido
         </div>
         <div [hidden]="!eml.errors.minlength">
-          L'email doit avoir au moins 8 caractères
+          El mail debe tener al menos 8 caracteres
         </div>
     </div>
   </div>
@@ -21,10 +21,10 @@
     <div *ngIf="passwd.errors && (passwd.dirty || passwd.touched)"
          class="alert alert-danger">
         <div [hidden]="!passwd.errors.required">
-          Le password est requis
+          La password es requerida
         </div>
         <div [hidden]="!passwd.errors.minlength">
-          Le password doit avoir au moins 8 caractères
+          La password debe tener al menos 8 caracteres
         </div>
     </div>
   </div>
@@ -33,13 +33,13 @@
     <div class="col-xs-8">
       <div class="checkbox icheck icheckbox_square-blue">
         <label>
-          <input type="checkbox"> Remember Me
+          <input type="checkbox"> Recordarme
         </label>
       </div>
     </div>
     <!-- /.col -->
     <div class="col-xs-4">
-      <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="login()" >Sign In</button>
+      <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="login()" >Login</button>
     </div>
     <!-- /.col -->
   </div>
@@ -55,5 +55,5 @@
 </div>
 <!-- /.social-auth-links -->
 
-<a href="#">I forgot my password</a><br>
-<a routerLink="/register" class="text-center">Register a new membership</a>
+<a href="#">Olvidaste la password?</a><br>
+<a routerLink="/register" class="text-center">Registrarse</a>

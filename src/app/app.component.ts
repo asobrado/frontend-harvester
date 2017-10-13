@@ -20,40 +20,92 @@ export class AppComponent implements OnInit {
   private footer = {
       left_part: `<strong>
         Copyright &copy; 2017
-        <a href="http://www.weberantoine.fr" >WEBER Antoine</a>.
+        <a href="http://sedici.unlp.edu.ar" >PREBI-SEDICI</a>.
     	</strong>
-      Open-source Sharing`,
-      right_part: 'Bootstrapping Ngx-Admin-LTE',
+      `,
+      right_part: '',
     };
   // define here your own links menu structure
   private mylinks: any = [
     {
-      'title': 'Home',
+      'title': 'Inicio',
       'icon': 'dashboard',
       'link': ['/']
     },
     {
-      'title': 'Sub menu',
+      'title': 'Repositorios',
       'icon': 'link',
       'sublinks': [
         {
-          'title': 'Page 2',
+          'title': 'Crear Usuario',
           'link': ['/page/2'],
         },
         {
-          'title': 'Page 3',
+          'title': 'Listado',
           'link': ['/page/3'],
         }
       ]
     },
     {
+      'title': 'Usuarios',
+      'icon': 'link',
+      'sublinks': [
+        {
+          'title': 'Crear Usuario',
+          'link': ['/page/2'],
+        },
+        {
+          'title': 'Listado',
+          'link': ['/page/3'],
+        }
+      ]
+    },
+    {
+      'title': 'Roles',
+      'icon': 'link',
+      'sublinks': [
+        {
+          'title': 'Crear Rol',
+          'link': ['/page/2'],
+        },
+        {
+          'title': 'Listado',
+          'link': ['/page/3'],
+        }
+      ]
+    },
+    {
+      'title': 'Tipo Publicacion',
+      'icon': 'link',
+      'sublinks': [
+        {
+          'title': 'Crear Tipo de Publicacion',
+          'link': ['/page/2'],
+        },
+        {
+          'title': 'Listado',
+          'link': ['/page/3'],
+        }
+      ]
+    },
+    {
+      'title': 'Configuracion',
+      'icon': 'link',
+      'sublinks': [
+        {
+          'title': 'Configuracion',
+          'link': ['/page/2'],
+        }
+      ]
+    },
+  /*  {
       'title': 'External Link',
       'icon': 'google',
       'link': ['http://google.com'],
       'external': true,
       'target': '_blank'
-    },
-    {
+    },*/
+  /*  {
       'title': 'External Links',
       'icon': 'link',
       'sublinks': [
@@ -72,12 +124,12 @@ export class AppComponent implements OnInit {
           'target': '_blank'
         }
       ]
-    }
+    }*/
   ];
   // define here your logo
   private logo = {
-    html_mini: 'NG<b>X</b>',
-    html_lg: '<b>NGX</b>Admin-LTE',
+    html_mini: 'HV<b></b>',
+    html_lg: '<b>Harvester</b>',
   };
 
   constructor(
@@ -100,9 +152,9 @@ export class AppComponent implements OnInit {
     // defining some test users
     const user1 = new User( {
         avatarUrl: 'assets/img/user2-160x160.jpg',
-        email: 'weber.antoine.pro@gmail.com',
-        firstname: 'WEBER',
-        lastname: 'Antoine'
+        email: 'asobrado@gmail.com',
+        firstname: 'Ariel',
+        lastname: 'Sobrado'
     });
     const user2 = new User( {
         avatarUrl: 'assets/img/user2-160x160.jpg',
