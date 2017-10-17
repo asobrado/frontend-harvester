@@ -8,7 +8,7 @@ Bootstraping of Angular4 with AdminLTE dashboard template
 
 ![Preview](https://almsaeedstudio.com/img/AdminLTE2.1.png)
 
-
+                                                                                                                                                                                                                                                                                                                                      
 ## Launching with docker
 
 ```
