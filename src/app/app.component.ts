@@ -37,12 +37,12 @@ export class AppComponent implements OnInit {
       'icon': 'link',
       'sublinks': [
         {
-          'title': 'Crear Usuario',
+          'title': 'Crear',
           'link': ['/page/2'],
         },
         {
           'title': 'Listado',
-          'link': ['/page/3'],
+          'link': ['/repositorios'],
         }
       ]
     },

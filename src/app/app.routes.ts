@@ -7,6 +7,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNumComponent } from './pages/page-num/page-num.component';
+import { RepositoriosComponent } from './pages/repositorios/repositorios.component';
+
 
 // Components
 import { AppComponent } from './app.component';
@@ -30,6 +32,11 @@ const routes: Routes = [
         canActivate: [CanActivateGuard],
         component: PageNumComponent,
         path: 'page/:id'
+      },
+      {
+        canActivate: [CanActivateGuard],
+        component: RepositoriosComponent,
+        path: 'repositorios'
       },
     ],
     component: LayoutAuthComponent,
@@ -60,6 +67,7 @@ const routes: Routes = [
     component: LayoutRegisterComponent,
     path: 'register',
   }
+
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
