@@ -27,11 +27,15 @@ const pages = [
 
 // main bootstrap
 import { routing } from './app.routes';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { TipoPublicacionComponent } from './pages/tipo-publicacion/tipo-publicacion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ...pages
+    ...pages,
+    UsuariosComponent,
+    TipoPublicacionComponent
   ],
   imports: [
     BrowserModule,
