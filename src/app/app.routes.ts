@@ -8,6 +8,10 @@ import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNumComponent } from './pages/page-num/page-num.component';
 import { RepositoriosComponent } from './pages/repositorios/repositorios.component';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+
+import { TipoPublicacionComponent } from './pages/tipo-publicacion/tipo-publicacion.component';
+
 
 
 // Components
@@ -37,6 +41,16 @@ const routes: Routes = [
         canActivate: [CanActivateGuard],
         component: RepositoriosComponent,
         path: 'repositorios'
+      },
+      {
+        canActivate: [CanActivateGuard],
+        component: UsuariosComponent,
+        path: 'usuarios'
+      },
+      {
+        canActivate: [CanActivateGuard],
+        component: TipoPublicacionComponent,
+        path: 'tipos-publicacion'
       },
     ],
     component: LayoutAuthComponent,

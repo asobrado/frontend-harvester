@@ -52,11 +52,11 @@ export class AppComponent implements OnInit {
       'sublinks': [
         {
           'title': 'Crear Usuario',
-          'link': ['/page/2'],
+          'link': ['/usuarios/agregar'],
         },
         {
           'title': 'Listado',
-          'link': ['/page/3'],
+          'link': ['/usuarios'],
         }
       ]
     },
@@ -66,11 +66,11 @@ export class AppComponent implements OnInit {
       'sublinks': [
         {
           'title': 'Crear Rol',
-          'link': ['/page/2'],
+          'link': ['/roles/agregar'],
         },
         {
           'title': 'Listado',
-          'link': ['/page/3'],
+          'link': ['/roles'],
         }
       ]
     },
@@ -80,11 +80,11 @@ export class AppComponent implements OnInit {
       'sublinks': [
         {
           'title': 'Crear Tipo de Publicacion',
-          'link': ['/page/2'],
+          'link': ['/tipos-publicacion/agregar'],
         },
         {
           'title': 'Listado',
-          'link': ['/page/3'],
+          'link': ['/tipos-publicacion'],
         }
       ]
     },
