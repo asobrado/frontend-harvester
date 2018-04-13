@@ -56,7 +56,7 @@ const routes: Routes = [
       },
       {
         canActivate: [CanActivateGuard],
-        component: UsuariosComponent,
+        component: UsuariosNewComponent,
         path: 'usuarios/agregar'
       },
       {
