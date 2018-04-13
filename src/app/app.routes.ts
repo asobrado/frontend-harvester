@@ -8,9 +8,16 @@ import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNumComponent } from './pages/page-num/page-num.component';
 import { RepositoriosComponent } from './pages/repositorios/repositorios.component';
+import { RepositoriosNewComponent } from './pages/repositorios/repositorios.new.component';
+
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { UsuariosNewComponent } from './pages/usuarios/usuarios.new.component';
+
+
 
 import { TipoPublicacionComponent } from './pages/tipo-publicacion/tipo-publicacion.component';
+import { TipoPublicacionNewComponent } from './pages/tipo-publicacion/tipo-publicacion.new.component';
+
 
 
 
@@ -34,13 +41,13 @@ const routes: Routes = [
       },
       {
         canActivate: [CanActivateGuard],
-        component: PageNumComponent,
-        path: 'page/:id'
+        component: RepositoriosComponent,
+        path: 'repositorios'
       },
       {
         canActivate: [CanActivateGuard],
-        component: RepositoriosComponent,
-        path: 'repositorios'
+        component: RepositoriosNewComponent,
+        path: 'repositorios/agregar'
       },
       {
         canActivate: [CanActivateGuard],
@@ -49,8 +56,18 @@ const routes: Routes = [
       },
       {
         canActivate: [CanActivateGuard],
+        component: UsuariosComponent,
+        path: 'usuarios/agregar'
+      },
+      {
+        canActivate: [CanActivateGuard],
         component: TipoPublicacionComponent,
         path: 'tipos-publicacion'
+      },
+      {
+        canActivate: [CanActivateGuard],
+        component: TipoPublicacionNewComponent,
+        path: 'tipos-publicacion/agregar'
       },
     ],
     component: LayoutAuthComponent,

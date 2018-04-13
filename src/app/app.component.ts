@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
       'sublinks': [
         {
           'title': 'Crear',
-          'link': ['/page/2'],
+          'link': ['/repositorios/agregar'],
         },
         {
           'title': 'Listado',
