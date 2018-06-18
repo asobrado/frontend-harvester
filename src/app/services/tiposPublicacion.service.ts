@@ -4,11 +4,11 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { Observable} from "rxjs/Observable";
 import { GLOBAL} from "./global";
-import {Repositorio} from "../models/Repositorio";
+import {TipoPublicacion} from "../models/TipoPublicacion";
 
 
 @Injectable()
-export class RepositorioService {
+export class TiposPublicacionService {
 
 
     public url: string;
@@ -21,31 +21,31 @@ export class RepositorioService {
 
   }
 
-    public listarRepositorio(): Observable<any[]> {
+    public listarTipoPublicacion(): Observable<any[]> {
         let headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
-        return this._http.get(this.url+"repositorios",{headers:headers})
+        return this._http.get(this.url+"tipo_pulicacion",{headers:headers})
     }
 
-    public agregarRepositorio(repositorio: Repositorio): Observable<any>{
-        let json = JSON.stringify(repositorio);
+    public agregarTipoPublicacion(tipo_publicacion: TipoPublicacion): Observable<any>{
+        let json = JSON.stringify(tipo_publicacion);
         let params = "json="+json;
         let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
-        return this._http.post(this.url+'repositorio', params, {headers: headers});
+        return this._http.post(this.url+'tipo_publicacion', params, {headers: headers});
     }
 
-    public editarRepositorio(repositorio: Repositorio): Observable<any>{
-        let json = JSON.stringify(repositorio);
+    public editarTipoPublicacion(tipo_publicacion: TipoPublicacion): Observable<any>{
+        let json = JSON.stringify(tipo_publicacion);
         let params = "json="+json;
         let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
-        return this._http.put(this.url+'repositorio', params, {headers: headers});
+        return this._http.put(this.url+'tipo_publicacion', params, {headers: headers});
     }
 
 
-   public eliminarRepositorio(repositorio: Repositorio): Observable<any>{
-       let json = JSON.stringify(repositorio);
+   public eliminarTipoPublicacion(tipo_publicacion: TipoPublicacion): Observable<any>{
+       let json = JSON.stringify(tipo_publicacion);
        let params = "json="+json;
        let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
-       return this._http.delete(this.url+'repositorio', {headers: headers});
+       return this._http.delete(this.url+'tipo_publicacion', {headers: headers});
    }
 
 

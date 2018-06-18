@@ -4,10 +4,11 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { Observable} from "rxjs/Observable";
 import { GLOBAL} from "./global";
+import {Repositorio} from "../models/Repositorio";
 
 
 @Injectable()
-export class RepositoriosService {
+export class RepositorioService {
 
 
     public url: string;
@@ -20,24 +21,33 @@ export class RepositoriosService {
 
   }
 
+    public listarRepositorio(): Observable<any[]> {
+        let headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
+        return this._http.get(this.url+"repositorios",{headers:headers})
+    }
 
-   listarRepositorio(){
+    public agregarRepositorio(repositorio: Repositorio): Observable<any>{
+        let json = JSON.stringify(repositorio);
+        let params = "json="+json;
+        let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+        return this._http.post(this.url+'repositorio', params, {headers: headers});
+    }
 
+    public editarRepositorio(repositorio: Repositorio): Observable<any>{
+        let json = JSON.stringify(repositorio);
+        let params = "json="+json;
+        let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+        return this._http.put(this.url+'repositorio', params, {headers: headers});
+    }
+
+
+   public eliminarRepositorio(repositorio: Repositorio): Observable<any>{
+       let json = JSON.stringify(repositorio);
+       let params = "json="+json;
+       let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+       return this._http.delete(this.url+'repositorio', {headers: headers});
    }
 
-   agregarRepositorio(){
-
-   }
-
-
-   editarRepositorio(){
-
-   }
-
-
-   eliminarRepositorio(){
-
-   }
 
 
 

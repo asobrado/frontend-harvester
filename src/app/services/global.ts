@@ -1,3 +1,3 @@
 export var GLOBAL = {
-    url_api: 'localhost'
+    API_URL: 'http://127.0.0.1:8080/'
 };

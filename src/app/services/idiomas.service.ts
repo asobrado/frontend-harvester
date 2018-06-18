@@ -4,11 +4,11 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { Observable} from "rxjs/Observable";
 import { GLOBAL} from "./global";
-import {Repositorio} from "../models/Repositorio";
+import {Idioma} from "../models/Idioma";
 
 
 @Injectable()
-export class RepositorioService {
+export class IdiomasService {
 
 
     public url: string;
@@ -21,31 +21,31 @@ export class RepositorioService {
 
   }
 
-    public listarRepositorio(): Observable<any[]> {
+    public listarIdiomas(): Observable<any[]> {
         let headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
-        return this._http.get(this.url+"repositorios",{headers:headers})
+        return this._http.get(this.url+"idiomas",{headers:headers})
     }
 
-    public agregarRepositorio(repositorio: Repositorio): Observable<any>{
-        let json = JSON.stringify(repositorio);
+    public agregarIdioma(idioma: Idioma): Observable<any>{
+        let json = JSON.stringify(idioma);
         let params = "json="+json;
         let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
-        return this._http.post(this.url+'repositorio', params, {headers: headers});
+        return this._http.post(this.url+'idioma', params, {headers: headers});
     }
 
-    public editarRepositorio(repositorio: Repositorio): Observable<any>{
-        let json = JSON.stringify(repositorio);
+    public editarIdioma(idioma: Idioma): Observable<any>{
+        let json = JSON.stringify(idioma);
         let params = "json="+json;
         let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
-        return this._http.put(this.url+'repositorio', params, {headers: headers});
+        return this._http.put(this.url+'idioma', params, {headers: headers});
     }
 
 
-   public eliminarRepositorio(repositorio: Repositorio): Observable<any>{
-       let json = JSON.stringify(repositorio);
+   public eliminarIdioma(idioma: Idioma): Observable<any>{
+       let json = JSON.stringify(idioma);
        let params = "json="+json;
        let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
-       return this._http.delete(this.url+'repositorio', {headers: headers});
+       return this._http.delete(this.url+'idioma', {headers: headers});
    }
 
 
