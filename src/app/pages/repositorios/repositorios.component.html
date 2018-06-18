@@ -11,14 +11,17 @@
 					<th>Descripcion </th>
 					<th>Url</th>
 					<th>Email de Contacto</th>
+					<th>Operaciones</th>
+
 				</tr>
 				</thead>
-				<tbody
+				<tbody>
 				<tr *ngFor = "let repositorio of repositorios">
 					<td>{{ repositorio.name}}</td>
 					<td>{{ repositorio.description }}</td>
 					<td>{{ repositorio.url}}</td>
 					<td>{{ repositorio.contactEmail}}</td>
+					<td><a [routerLink]="['/repositorio/editar']" >Editar</a></td>
 				</tr>
 			</tbody>
 		</table>

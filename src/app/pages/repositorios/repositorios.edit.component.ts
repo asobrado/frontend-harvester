@@ -41,6 +41,37 @@ export class RepositoriosEditComponent implements OnInit, OnDestroy {
 
     }
 
+
+    public onSubmit(){
+            this.updateRepositorio();
+      }
+
+    public updateRepositorio(){
+        this._route.params.forEach((params: Params) => {
+            let id = params['id'];
+
+            this._productoService.editProducto(id, this.producto).subscribe(
+                response => {
+                    if(response.code == 200){
+                        this._router.navigate(['/producto', id]);
+                    }else{
+                        console.log(response);
+                    }
+                },
+                error => {
+                    console.log(<any>error);
+                }
+            );
+        });
+    }
+
+
+
+
+
+
+
+
     public ngOnDestroy() {
         // removing the header
         this.breadServ.clear();

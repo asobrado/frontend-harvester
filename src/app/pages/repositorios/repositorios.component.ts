@@ -12,7 +12,7 @@ import { RepositorioService} from "../../services/repositorio.service";
 export class RepositoriosComponent implements OnInit, OnDestroy {
   public date: Date = new Date();
   public repositorios=[];
-
+  public confirmado;
 
   constructor(
     private msgServ: MessagesService,
@@ -37,24 +37,50 @@ export class RepositoriosComponent implements OnInit, OnDestroy {
       ]
     });
 
-    this._repositorioService.listarRepositorio().subscribe(result => {
-
-            //if(result.code != 200){
-              //  console.log(result);
-            //}else{
-                this.repositorios = result;
-                console.log(this.repositorios);
-           // }
-          },
-        error => {
-            console.log(<any>error);
-        })
+    this.getRepositorios();
 
 
 
   }
 
-  public ngOnDestroy() {
+
+    public getRepositorios(){
+        this._repositorioService.listarRepositorio().subscribe(result => {
+                this.repositorios = result;
+                console.log(this.repositorios);
+            },
+            error => {
+                console.log(<any>error);
+            })
+    }
+
+    borrarConfirm(id){
+        this.confirmado = id;
+    }
+
+    cancelarConfirm(){
+        this.confirmado = null;
+    }
+
+
+
+    deleteRepositorio(id){
+        this._repositorioService.eliminarRepositorio(id).subscribe(
+            response => {
+                if(response.code == 200){
+                    this.getRepositorios();
+                }else{
+                    alert('Error al borrar producto');
+                }
+            },
+            error => {
+                console.log(<any>error);
+            }
+        );
+    }
+
+
+    public ngOnDestroy() {
     // removing the header
     this.breadServ.clear();
   }

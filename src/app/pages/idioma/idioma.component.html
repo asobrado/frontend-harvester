@@ -1,3 +1,25 @@
-<p>
-  idioma works!
-</p>
+<div class="box">
+  <div class="box-header">
+    <h3 class="box-title">Listado de Idiomas</h3>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <table id="example1" class="table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>iso639 </th>
+
+      </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor ="let idioma of idiomas">
+          <td>{{ idioma.name}}</td>
+          <td>{{ idioma.iso639 }}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

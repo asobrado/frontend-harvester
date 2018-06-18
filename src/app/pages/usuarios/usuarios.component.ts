@@ -9,9 +9,20 @@ import {UsuarioService} from "../../services/usuario.service";
 })
 export class UsuariosComponent implements OnInit {
 
+  public usuarios=[];
   constructor(public _usuarioService: UsuarioService) { }
 
   ngOnInit() {
+      this._usuarioService.listarUsuario().subscribe(result => {
+          this.usuarios = result;
+      },
+      error => {
+              console.log(<any>error);
+          })
+
   }
+
+
+
 
 }
