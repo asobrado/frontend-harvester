@@ -34,6 +34,7 @@ import { TipoPublicacionNewComponent } from './pages/tipo-publicacion/tipo-publi
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { UsuariosNewComponent } from './pages/usuarios/usuarios.new.component';
 import { IdiomaComponent } from './pages/idioma/idioma.component';
+import { TareasComponent } from './pages/tareas/tareas.component';
 
 
 
@@ -58,6 +59,7 @@ const pages = [
     RepositoriosComponent,
     RepositoriosNewComponent,
     IdiomaComponent,
+    TareasComponent,
 
   ],
   imports: [
