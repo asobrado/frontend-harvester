@@ -23,6 +23,12 @@ import { TipoPublicacionNewComponent } from './pages/tipo-publicacion/tipo-publi
 
 // Components
 import { AppComponent } from './app.component';
+import {IdiomaComponent} from "./pages/idioma/idioma.component";
+import {RepositoriosEditComponent} from "./pages/repositorios/repositorios.edit.component";
+import {UsuariosEditComponent} from "./pages/usuarios/usuarios.edit.component";
+import {TipoPublicacionEditComponent} from "./pages/tipo-publicacion/tipo-publicacion.edit.component";
+import {IdiomaNewComponent} from "./pages/idioma/idioma.new.component";
+import {IdiomaEditComponent} from "./pages/idioma/idioma.edit.component";
 
 const routes: Routes = [
   // logged routes
@@ -35,7 +41,7 @@ const routes: Routes = [
         path: ''
       },
       {
-        canActivate: [CanActivateGuard],
+      //  canActivate: [CanActivateGuard],
         component: HomeComponent,
         path: 'home'
       },
@@ -49,6 +55,11 @@ const routes: Routes = [
         component: RepositoriosNewComponent,
         path: 'repositorios/agregar'
       },
+        {
+            canActivate: [CanActivateGuard],
+            component: RepositoriosEditComponent,
+            path: 'repositorios/editar'
+        },
       {
         canActivate: [CanActivateGuard],
         component: UsuariosComponent,
@@ -59,6 +70,11 @@ const routes: Routes = [
         component: UsuariosNewComponent,
         path: 'usuarios/agregar'
       },
+        {
+            canActivate: [CanActivateGuard],
+            component: UsuariosEditComponent,
+            path: 'usuarios/editar'
+        },
       {
         canActivate: [CanActivateGuard],
         component: TipoPublicacionComponent,
@@ -69,6 +85,29 @@ const routes: Routes = [
         component: TipoPublicacionNewComponent,
         path: 'tipos-publicacion/agregar'
       },
+        {
+            canActivate: [CanActivateGuard],
+            component: TipoPublicacionEditComponent,
+            path: 'tipos-publicacion/editar'
+        },
+
+        {
+            canActivate: [CanActivateGuard],
+            component: IdiomaComponent,
+            path: 'idiomas'
+        },
+        {
+            canActivate: [CanActivateGuard],
+            component: IdiomaNewComponent,
+            path: 'idioma/agregar'
+        },
+        {
+            canActivate: [CanActivateGuard],
+            component: IdiomaEditComponent,
+            path: 'idioma/editar'
+        },
+
+
     ],
     component: LayoutAuthComponent,
     data: [{
