@@ -1,17 +1,23 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BreadcrumbService , Message , MessagesService , User } from 'ngx-admin-lte';
+import { RepositorioService} from "../../services/repositorio.service";
+
 
 @Component({
   selector: 'app-repositorios',
   styleUrls: ['./repositorios.component.css'],
-  templateUrl: './repositorios.component.html'
+  templateUrl: './repositorios.component.html',
+  providers: [RepositorioService]
 })
 export class RepositoriosComponent implements OnInit, OnDestroy {
   public date: Date = new Date();
+  public repositorios=[];
+
 
   constructor(
     private msgServ: MessagesService,
-    private breadServ: BreadcrumbService
+    private breadServ: BreadcrumbService,
+    public _repositorioService:RepositorioService
   ) {
     // TODO
   }
@@ -30,6 +36,20 @@ export class RepositoriosComponent implements OnInit, OnDestroy {
         }
       ]
     });
+
+    this._repositorioService.listarRepositorio().subscribe(result => {
+
+            //if(result.code != 200){
+              //  console.log(result);
+            //}else{
+                this.repositorios = result;
+           // }
+          },
+        error => {
+            console.log(<any>error);
+        })
+
+
 
   }
 
