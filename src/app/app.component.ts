@@ -144,6 +144,7 @@ export class AppComponent implements OnInit {
 
   public ngOnInit() {
     // define menu
+
     this.menuServ.setCurrent(this.mylinks);
     this.footerServ.setCurrent(this.footer);
     this.logoServ.setCurrent(this.logo);

@@ -26,14 +26,25 @@ import { RegisterComponent } from './pages/register/register.component';
 
 import { RepositoriosComponent } from './pages/repositorios/repositorios.component';
 import { RepositoriosNewComponent } from './pages/repositorios/repositorios.new.component';
+import { RepositoriosEditComponent } from './pages/repositorios/repositorios.edit.component';
+
 
 import { TipoPublicacionComponent } from './pages/tipo-publicacion/tipo-publicacion.component';
 import { TipoPublicacionNewComponent } from './pages/tipo-publicacion/tipo-publicacion.new.component';
+import { TipoPublicacionEditComponent } from './pages/tipo-publicacion/tipo-publicacion.edit.component';
+
 
 
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { UsuariosNewComponent } from './pages/usuarios/usuarios.new.component';
+import { UsuariosEditComponent } from './pages/usuarios/usuarios.edit.component';
+
+
 import { IdiomaComponent } from './pages/idioma/idioma.component';
+import { IdiomaNewComponent } from './pages/idioma/idioma.new.component';
+import { IdiomaEditComponent } from './pages/idioma/idioma.edit.component';
+
+
 import { TareasComponent } from './pages/tareas/tareas.component';
 
 
@@ -54,11 +65,18 @@ const pages = [
     ...pages,
     UsuariosComponent,
     UsuariosNewComponent,
+    UsuariosEditComponent,
     TipoPublicacionComponent,
     TipoPublicacionNewComponent,
+    TipoPublicacionEditComponent,
+
     RepositoriosComponent,
     RepositoriosNewComponent,
+    RepositoriosEditComponent,
+
     IdiomaComponent,
+    IdiomaNewComponent,
+    IdiomaEditComponent,
     TareasComponent,
 
   ],
