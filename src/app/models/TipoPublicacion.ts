@@ -5,9 +5,8 @@ import { Injectable } from '@angular/core';
 export class TipoPublicacion {
 
     public constructor(public nombre:string,
-                       public descirpcion: string,
-                       public email_contacto: string,
-                       public url: string
+                       public descirpcion: string
+
     ) {
     }
 

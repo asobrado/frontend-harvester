@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 export class Repositorio {
 
     public constructor(public nombre:string,
-                       public descirpcion: string,
-                       public email_contacto: string,
+                       public descripcion: string,
+                       public contactEmail: string,
                        public url: string
     ) {
     }
