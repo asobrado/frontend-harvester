@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
 
   public onSubmit(form) {
 
-      this.loading = true;
+     // this.loading = true;
 
       console.log('entro');
 
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
       user1.connected = true;
       this.router.navigate(['home']);
       this.userServ.setCurrentUser( user1 );
-
+    //  this.loading = false;
       /*this._oauthService.signup(this.usuario).subscribe(result=>{
           if (result === true) {
                 this.router.navigate(['home']);
