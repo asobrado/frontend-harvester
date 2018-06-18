@@ -43,6 +43,7 @@ export class RepositoriosComponent implements OnInit, OnDestroy {
               //  console.log(result);
             //}else{
                 this.repositorios = result;
+                console.log(this.repositorios);
            // }
           },
         error => {

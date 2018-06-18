@@ -13,12 +13,12 @@
 					<th>Email de Contacto</th>
 				</tr>
 				</thead>
-				<tbody>
-				<tr>
-				    <td>Trident</td>
-				    <td>Internet Explorer 4.0</td>
-				    <td>Win 95+</td>
-				    <td> 4</td>
+				<tbody
+				<tr *ngFor = "let repositorio of repositorios">
+					<td>{{ repositorio.name}}</td>
+					<td>{{ repositorio.description }}</td>
+					<td>{{ repositorio.url}}</td>
+					<td>{{ repositorio.contactEmail}}</td>
 				</tr>
 			</tbody>
 		</table>
