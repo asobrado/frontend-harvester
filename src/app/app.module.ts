@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 
+import {UsuarioService} from "./services/usuario.service";
+import { OauthService} from "./services/oauth.service";
+import { GlobalVars } from "./services/global_vars";
+
 // main bootstrap
 import { routing } from './app.routes';
 
@@ -29,6 +33,7 @@ import { TipoPublicacionNewComponent } from './pages/tipo-publicacion/tipo-publi
 
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { UsuariosNewComponent } from './pages/usuarios/usuarios.new.component';
+import { IdiomaComponent } from './pages/idioma/idioma.component';
 
 
 
@@ -52,6 +57,7 @@ const pages = [
     TipoPublicacionNewComponent,
     RepositoriosComponent,
     RepositoriosNewComponent,
+    IdiomaComponent,
 
   ],
   imports: [
@@ -62,7 +68,8 @@ const pages = [
     NgxAdminLteModule,
     routing
   ],
-  providers: [],
+  providers: [ UsuarioService, OauthService,
+      GlobalVars ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
