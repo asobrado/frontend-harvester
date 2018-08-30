@@ -21,7 +21,8 @@
 					<td>{{ repositorio.description }}</td>
 					<td>{{ repositorio.url}}</td>
 					<td>{{ repositorio.contactEmail}}</td>
-					<td><a [routerLink]="['/repositorio/editar']" >Editar</a></td>
+					<td><a [routerLink]="['/repositorios/editar', repositorio.id]" class="btn btn-md btn-warning">Editar</a></td>
+
 				</tr>
 			</tbody>
 		</table>

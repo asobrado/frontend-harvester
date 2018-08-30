@@ -58,8 +58,9 @@ const routes: Routes = [
         {
             canActivate: [CanActivateGuard],
             component: RepositoriosEditComponent,
-            path: 'repositorios/editar'
+            path: 'repositorios/editar/:id'
         },
+
       {
         canActivate: [CanActivateGuard],
         component: UsuariosComponent,

@@ -8,7 +8,7 @@ import {Repositorio} from "../models/Repositorio";
 
 
 @Injectable()
-export class RepositorioService {
+export class HarvesterService {
 
 
     public url: string;
@@ -21,12 +21,12 @@ export class RepositorioService {
 
   }
 
-    public listarRepositorio(): Observable<any[]> {
+    public listarHarvesters(): Observable<any[]> {
         let headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
-        return this._http.get(this.url+"repositorios")
+        return this._http.get(this.url+"harvesters")
     }
 
-    public agregarRepositorio(repositorio: Repositorio): Observable<any>{
+    public agregarHarvesters(repositorio: Repositorio): Observable<any>{
         let json = JSON.stringify(repositorio);
         let params = "json="+json;
         let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');

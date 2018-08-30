@@ -1,9 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BreadcrumbService , Message , MessagesService , User } from 'ngx-admin-lte';
-
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 // Servicios
 import { RepositorioService} from "../../services/repositorio.service";
+import {Repositorio} from "../../models/Repositorio";
 
 @Component({
     selector: 'repositorio-edit',
@@ -14,10 +15,13 @@ import { RepositorioService} from "../../services/repositorio.service";
 export class RepositoriosEditComponent implements OnInit, OnDestroy {
     public date: Date = new Date();
     public titulo: string;
+    public repositorio: Repositorio;
     constructor(
         private msgServ: MessagesService,
         private breadServ: BreadcrumbService,
-        public _repositorioService: RepositorioService
+        public _repositorioService: RepositorioService,
+        private _route: ActivatedRoute,
+        private _router: Router
     ) {
         // TODO
     }
@@ -50,10 +54,10 @@ export class RepositoriosEditComponent implements OnInit, OnDestroy {
         this._route.params.forEach((params: Params) => {
             let id = params['id'];
 
-            this._productoService.editProducto(id, this.producto).subscribe(
+            this._repositorioService.editarRepositorio(id, this.repositorio).subscribe(
                 response => {
                     if(response.code == 200){
-                        this._router.navigate(['/producto', id]);
+                        this._router.navigate(['/repositorios', id]);
                     }else{
                         console.log(response);
                     }
