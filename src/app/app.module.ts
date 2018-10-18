@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 
 
 import {UsuarioService} from "./services/usuario.service";
-import { OauthService} from "./services/oauth.service";
+import { AuthenticationService} from "./services/authentication.service";
 import { GlobalVars } from "./services/global_vars";
 
 // main bootstrap
