@@ -46,8 +46,10 @@ import { IdiomaEditComponent } from './pages/idioma/idioma.edit.component';
 
 
 import { TareasComponent } from './pages/tareas/tareas.component';
+import { ReactiveFormsModule }    from '@angular/forms';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 const pages = [
@@ -86,10 +88,15 @@ const pages = [
     FormsModule,
     HttpModule,
     NgxAdminLteModule,
-    routing
+    routing,
+      ReactiveFormsModule,
+      HttpClientModule,
   ],
   providers: [ UsuarioService, OauthService,
-      GlobalVars ],
+      GlobalVars
+      { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+      { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
