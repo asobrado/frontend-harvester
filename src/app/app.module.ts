@@ -93,7 +93,7 @@ const pages = [
       HttpClientModule,
   ],
   providers: [ UsuarioService, OauthService,
-      GlobalVars
+      GlobalVars,
       { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
       { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
