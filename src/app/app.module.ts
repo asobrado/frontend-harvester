@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, HttpClientModule } from '@angular/common/http';
 
 
 import {UsuarioService} from "./services/usuario.service";
@@ -50,6 +50,7 @@ import { ReactiveFormsModule }    from '@angular/forms';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HarvesterDefitionsComponent } from './harvester-defitions/harvester-defitions.component';
 
 
 const pages = [
@@ -80,6 +81,7 @@ const pages = [
     IdiomaNewComponent,
     IdiomaEditComponent,
     TareasComponent,
+    HarvesterDefitionsComponent,
 
   ],
   imports: [
@@ -87,6 +89,7 @@ const pages = [
     TranslateModule.forRoot(),
     FormsModule,
     HttpModule,
+    HttpClientModule,
     NgxAdminLteModule,
     routing,
       ReactiveFormsModule,
