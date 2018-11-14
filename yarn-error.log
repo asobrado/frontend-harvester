@@ -1,17 +1,20 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn start
+  /usr/bin/node /usr/bin/yarn
 
 PATH: 
   /home/asobrado/bin:/home/asobrado/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/asobrado/Android/Sdk/tools:/home/asobrado/Android/Sdk/platform-tools
 
 Yarn version: 
-  1.5.1
+  1.12.1
 
 Node version: 
-  9.4.0
+  8.12.0
 
 Platform: 
   linux x64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/home/asobrado/dev/prebi/frontend-harvester/node_modules/@angular-devkit/build-angular/node_modules/punycode'
 
 npm manifest: 
   {
@@ -29,43 +32,45 @@ npm manifest:
     },
     "private": true,
     "dependencies": {
-      "@angular/common": "^4.4.4",
-      "@angular/compiler": "^4.4.4",
-      "@angular/core": "^4.4.4",
-      "@angular/forms": "^4.4.4",
-      "@angular/http": "^4.4.4",
-      "@angular/platform-browser": "^4.4.4",
-      "@angular/platform-browser-dynamic": "^4.4.4",
-      "@angular/router": "^4.4.4",
-      "admin-lte": "2.3.11",
-      "angular2-toaster": "^3.0.1",
-      "bootstrap": "^3.3.7",
-      "core-js": "^2.4.1",
+      "@angular/common": "^6.1.10",
+      "@angular/compiler": "^6.1.10",
+      "@angular/core": "^6.1.10",
+      "@angular/forms": "^6.1.10",
+      "@angular/http": "^6.1.10",
+      "@angular/platform-browser": "^6.1.10",
+      "@angular/platform-browser-dynamic": "^6.1.10",
+      "@angular/router": "^6.1.10",
+      "admin-lte": "2.4.8",
+      "angular2-toaster": "^6.1.0",
+      "bootstrap": "^4.1.3",
+      "core-js": "^2.5.7",
       "font-awesome": "^4.7.0",
-      "ngx-admin-lte": "^0.5.1",
-      "ionicons": "^3.0.0",
-      "jquery": "^3.2.1",
-      "rxjs": "^5.1.0",
-      "zone.js": "^0.8.4"
+      "ionicons": "^4.4.6",
+      "jquery": "^3.3.1",
+      "ngx-admin-lte": "^2.0.0-beta.11",
+      "rxjs": "^6.3.3",
+      "zone.js": "^0.8.26",
+      "rxjs-compat": "^6.0.0-rc.0"
     },
     "devDependencies": {
-      "@angular/cli": "1.0.3",
-      "@angular/compiler-cli": "^4.4.4",
-      "@types/jasmine": "2.5.38",
-      "@types/node": "~6.0.60",
-      "codelyzer": "~2.0.0",
-      "jasmine-core": "~2.5.2",
-      "jasmine-spec-reporter": "~3.2.0",
-      "karma": "~1.4.1",
-      "karma-chrome-launcher": "~2.1.1",
+      "@angular-devkit/build-angular": "~0.8.0",
+      "@angular/cli": "^6.2.5",
+      "@angular/compiler-cli": "^6.1.10",
+      "@types/jasmine": "2.8.9",
+      "@types/node": "~10.12.0",
+      "codelyzer": "~4.5.0",
+      "jasmine-core": "~3.2.1",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "^3.0.0",
+      "karma-chrome-launcher": "~2.2.0",
       "karma-cli": "~1.0.1",
-      "karma-coverage-istanbul-reporter": "^0.2.0",
-      "karma-jasmine": "~1.1.0",
-      "karma-jasmine-html-reporter": "^0.2.2",
-      "protractor": "~5.1.0",
-      "ts-node": "~2.0.0",
-      "tslint": "~4.5.0",
-      "typescript": "~2.2.0"
+      "karma-coverage-istanbul-reporter": "^2.0.4",
+      "karma-jasmine": "~1.1.2",
+      "karma-jasmine-html-reporter": "^1.3.1",
+      "protractor": "^5.4.1",
+      "ts-node": "~7.0.1",
+      "tslint": "~5.11.0",
+      "typescript": "~2.9.2"
     },
     "description": "[![Join the chat at https://gitter.im/TwanoO67/ng2-admin-lte](https://badges.gitter.im/TwanoO67/ng2-admin-lte.svg)](https://gitter.im/TwanoO67/ng2-admin-lte?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/TwanoO67/ng2-admin-lte.svg?branch=master)](https://travis-ci.org/TwanoO67/ng2-admin-lte)",
     "main": "karma.conf.js",
@@ -5806,18 +5811,3 @@ Lockfile:
   zone.js@^0.8.17, zone.js@^0.8.4:
     version "0.8.18"
     resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.18.tgz#8cecb3977fcd1b3090562ff4570e2847e752b48d"
-
-Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c ng serve --host 0.0.0.0
-  Directory: /home/asobrado/dev/prebi/frontend-harvester
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
-      at ChildProcess.emit (events.js:160:13)
-      at maybeClose (internal/child_process.js:943:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)
