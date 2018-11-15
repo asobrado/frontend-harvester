@@ -22,7 +22,7 @@ export class HarvesterService {
 
   }
 
-    public listarHarvesters(): Observable<any[]> {
+    public listarHarvesters(): Observable<any> {
         let headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
         return this._http.get(this.url+"harvesters")
     }
@@ -34,7 +34,7 @@ export class HarvesterService {
         return this._http.post(this.url+'repositorio', params, {headers: headers});
     }
 
-    public editarRepositorio(id,repositorio: Repositorio): Observable<any>{
+    public editarHarvesters(id,repositorio: Repositorio): Observable<any>{
         let json = JSON.stringify(repositorio);
         let params = "json="+json;
         let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
@@ -42,7 +42,7 @@ export class HarvesterService {
     }
 
 
-   public eliminarRepositorio(repositorio: Repositorio): Observable<any>{
+   public eliminarHarvesters(repositorio: Repositorio): Observable<any>{
        let json = JSON.stringify(repositorio);
        let params = "json="+json;
        let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');

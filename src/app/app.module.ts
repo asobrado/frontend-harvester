@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule, HttpClientModule } from '@angular/common/http';
 
 
 import {UsuarioService} from "./services/usuario.service";
@@ -20,7 +19,6 @@ import { NgxAdminLteModule } from 'ngx-admin-lte';
 
 // les pages
 import { HomeComponent } from './pages/home/home.component';
-import { PageNumComponent } from './pages/page-num/page-num.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 
@@ -50,12 +48,11 @@ import { ReactiveFormsModule }    from '@angular/forms';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { HarvesterDefitionsComponent } from './harvester-defitions/harvester-defitions.component';
+import { HarvesterDefitionsComponent } from './pages/harvester-defitions/harvester-defitions.component';
 
-
+import {APP_BASE_HREF} from '@angular/common';
 const pages = [
     HomeComponent,
-    PageNumComponent,
     LoginComponent,
     RegisterComponent,
     RepositoriosComponent
@@ -88,17 +85,17 @@ const pages = [
     BrowserModule,
     TranslateModule.forRoot(),
     FormsModule,
-    HttpModule,
     HttpClientModule,
     NgxAdminLteModule,
     routing,
       ReactiveFormsModule,
       HttpClientModule,
   ],
-  providers: [ UsuarioService, OauthService,
+  providers: [ UsuarioService, AuthenticationService,
       GlobalVars,
       { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
       { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+      {provide: APP_BASE_HREF, useValue : '/' }
   ],
   bootstrap: [AppComponent]
 })

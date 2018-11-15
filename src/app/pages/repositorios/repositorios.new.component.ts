@@ -24,18 +24,6 @@ export class RepositoriosNewComponent implements OnInit, OnDestroy {
     // setttings the header for the home
 
       this.titulo= 'Agregar Repositorio';
-      this.breadServ.set({
-      description: 'Agregar Repositorio',
-      display: true,
-      header: 'Dashboard',
-      levels: [
-        {
-          icon: 'dashboard',
-          link: ['/repositorios'],
-          title: 'Repositorios'
-        }
-      ]
-    });
 
   }
 

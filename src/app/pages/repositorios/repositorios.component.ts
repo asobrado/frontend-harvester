@@ -24,18 +24,7 @@ export class RepositoriosComponent implements OnInit, OnDestroy {
 
   public ngOnInit() {
     // setttings the header for the home
-    this.breadServ.set({
-      description: 'Pagina de Repositorios',
-      display: true,
-      header: 'Dashboard',
-      levels: [
-        {
-          icon: 'dashboard',
-          link: ['/repositorios'],
-          title: 'Repositorios'
-        }
-      ]
-    });
+
 
     this.getRepositorios();
 

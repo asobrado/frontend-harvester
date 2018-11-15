@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {BreadcrumbService, MessagesService} from "ngx-admin-lte/index";
+//import { MessagesService} from "ngx-admin-lte/index";
 
 @Component({
   selector: 'idioma-new',
@@ -11,8 +11,7 @@ export class IdiomaNewComponent implements OnInit, OnDestroy {
     public date: Date = new Date();
     public titulo: string;
     constructor(
-        private msgServ: MessagesService,
-        private breadServ: BreadcrumbService
+  //      private msgServ: MessagesService,
     ) {
         // TODO
     }
@@ -22,7 +21,7 @@ export class IdiomaNewComponent implements OnInit, OnDestroy {
         this.titulo= 'Agregar un Idioma';
 
         // setttings the header for the home
-        this.breadServ.set({
+        /*this.breadServ.set({
             description: 'Agregar Idioma',
             display: true,
             header: 'Dashboard',
@@ -33,13 +32,12 @@ export class IdiomaNewComponent implements OnInit, OnDestroy {
                     title: 'Repositorios'
                 }
             ]
-        });
+        });*/
 
     }
 
     public ngOnDestroy() {
         // removing the header
-        this.breadServ.clear();
     }
 
 }

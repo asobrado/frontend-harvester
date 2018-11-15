@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RepositorioService} from "../../services/repositorio.service";
-import {BreadcrumbService, MessagesService} from "ngx-admin-lte/index";
+//import { MessagesService} from "ngx-admin-lte/index";
 import {IdiomasService} from "../../services/idiomas.service";
 
 @Component({
@@ -15,8 +15,7 @@ export class IdiomaComponent implements OnInit {
 
 
     constructor(
-        private msgServ: MessagesService,
-        private breadServ: BreadcrumbService,
+  //      private msgServ: MessagesService,
         public _repositorioIdioma:IdiomasService
     ) {
         // TODO
@@ -24,7 +23,7 @@ export class IdiomaComponent implements OnInit {
 
     public ngOnInit() {
         // setttings the header for the home
-        this.breadServ.set({
+        /*this.breadServ.set({
             description: 'Pagina de Idiomas',
             display: true,
             header: 'Dashboard',
@@ -35,7 +34,7 @@ export class IdiomaComponent implements OnInit {
                     title: 'Repositorios'
                 }
             ]
-        });
+        });*/
 
         this._repositorioIdioma.listarIdiomas().subscribe(result => {
 
@@ -55,7 +54,7 @@ export class IdiomaComponent implements OnInit {
 
     public ngOnDestroy() {
         // removing the header
-        this.breadServ.clear();
+
     }
 
 

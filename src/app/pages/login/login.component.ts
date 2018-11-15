@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Usuario} from "../../models/Usuario";
-import { OauthService } from "../../services/oauth.service";
+import { AuthenticationService } from "../../services/authentication.service";
 import { User, UserService } from 'ngx-admin-lte';
 import { Router } from '@angular/router';
 
@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     error = '';
 
   constructor(
-    private _oauthService: OauthService,
+    private _oauthService: AuthenticationService,
     private router: Router,
     private userServ: UserService
   ) {
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
       });
       user1.connected = true;
       this.router.navigate(['home']);
-      this.userServ.setCurrentUser( user1 );
+    //  this.userServ.setCurrentUser( user1 );
     //  this.loading = false;
       /*this._oauthService.signup(this.usuario).subscribe(result=>{
           if (result === true) {

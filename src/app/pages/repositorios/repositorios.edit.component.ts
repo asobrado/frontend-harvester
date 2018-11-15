@@ -30,18 +30,6 @@ export class RepositoriosEditComponent implements OnInit, OnDestroy {
         // setttings the header for the home
 
         this.titulo= 'Editar Repositorio';
-        this.breadServ.set({
-            description: 'Editar Repositorio',
-            display: true,
-            header: 'Dashboard',
-            levels: [
-                {
-                    icon: 'dashboard',
-                    link: ['/repositorios'],
-                    title: 'Repositorios'
-                }
-            ]
-        });
 
     }
 

@@ -18,18 +18,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   public ngOnInit() {
     // setttings the header for the home
-    this.breadServ.set({
-      description: 'HomePage',
-      display: true,
-      header: 'Dashboard',
-      levels: [
-        {
-          icon: 'dashboard',
-          link: ['/'],
-          title: 'Home'
-        }
-      ]
-    });
 
   }
 

@@ -6,7 +6,6 @@ import { CanActivateGuard, LayoutAuthComponent, LayoutLoginComponent, LayoutRegi
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
-import { PageNumComponent } from './pages/page-num/page-num.component';
 import { RepositoriosComponent } from './pages/repositorios/repositorios.component';
 import { RepositoriosNewComponent } from './pages/repositorios/repositorios.new.component';
 
